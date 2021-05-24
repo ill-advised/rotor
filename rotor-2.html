@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Click to win!</title>
+  <body>
+      <p>Click <span id="toGo">1000000000000</span> more times to win!</p>
+      <span id="sequel"></span>
+    <input type="button" value="Count" id="countButton" />
+    <p>ROTOR 1 : <span id="displayCount">0</span></p>
+    <p>ROTOR 2 :  <span id="displayCount2">0</span></p>
+    <p>ROTOR 3 : <span id="displayCount3">0</span></p>
+    <p>ROTOR 4 : <span id="displayCount4">0</span></p>
+    <p>ROTOR 5 :  <span id="displayCount5">0</span></p>
+    <p>ROTOR 6 : <span id="displayCount6">0</span></p>
+ 
+    <script type="text/javascript">
+        
+        /* count variable starting definitions */
+        /** defining count variables **/
+        
+      var i = 1000000000000;
+      var count = 0;
+      var count2 = 0;
+      var count3 = 0;
+      var count4 = 0;
+      var count5 = 0;
+      var count6 = 0;
+        
+        /* getElementById variable definitions */
+        /** defining input/output variables**/
+      
+      var button = document.getElementById("countButton");
+      var display = document.getElementById("displayCount");
+      var display2 = document.getElementById("displayCount2");
+      var display3 = document.getElementById("displayCount3");
+      var display4 = document.getElementById("displayCount4");
+      var display5 = document.getElementById("displayCount5");
+      var display6 = document.getElementById("displayCount6");
+        
+      button.onclick = function(){
+        if (count != 100) {
+            count++;
+            display.innerHTML = count;
+            i--;
+            toGo.innerHTML = i
+        }
+        
+        if (count == 100) {
+            count = -1;
+            count2++;
+            display2.innerHTML = count2
+            i--;
+            toGo.innerHTML = i
+        }
+        
+        if (count2 == 100) {
+            count2 = -1;
+            count3++;
+            display3.innerHTML = count3
+            i--;
+            toGo.innerHTML = i
+        }
+      
+        
+        if (count3 == 100) {
+            count3 = -1;
+            count4++;
+            display4.innerHTML = count4
+            i--;
+            toGo.innerHTML = i
+        }
+      
+      
+        if (count4 == 100) {
+            count4 = -1;
+            count5++;
+            display5.innerHTML = count5
+            i--;
+            toGo.innerHTML = i
+        }
+      
+      
+        if (count5 == 100) {
+            count5 = -1;
+            count6++;
+            display6.innerHTML = count6
+            i--;
+            toGo.innerHTML = i
+        }
+      
+          
+        if (count6 == 52) {
+            count6 = 0;
+            display6.innerHTML = count6
+            i--;
+            toGo.innerHTML = i
+        }
+      
+        
+          if (i == 0) {
+                window.location.reload(true);
+          }
+      }
+      /* checks */
+
+    </script>
+  </body>
+</html>
